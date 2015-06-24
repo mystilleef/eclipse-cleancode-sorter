@@ -80,4 +80,19 @@ class Foo {
 }
 ```
 
-...developing...
+## What Works
+
+- Press Ctrl-Shift-Alt-F to sort document
+
+## What's Coming
+
+- Save action to automatically sort the document during save operations
+- Clean up action to perform group sort operations on packages and projects
+- Add command to source menu
+- Add options to preferences UI
+- feedback to user interface during sort operations
+
+
+## Update Site
+
+Update site will be added in a few hours for those who don't mind testing experimental software.
