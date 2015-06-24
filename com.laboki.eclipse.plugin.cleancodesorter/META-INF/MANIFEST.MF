@@ -1,0 +1,70 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: com.laboki.eclipse.plugin.cleancodesorter;singleton:=true
+Bundle-Version: 20150622
+Bundle-Activator: com.laboki.eclipse.plugin.cleancodesorter.Activator
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.9.1",
+ org.eclipse.jdt.core;bundle-version="3.10.2",
+ org.eclipse.text;bundle-version="3.5.300",
+ org.eclipse.jdt.ui;bundle-version="3.10.2",
+ org.eclipse.ltk.core.refactoring;bundle-version="3.6.101"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: com.google.common.annotations,
+ com.google.common.base;uses:="new com.google.common.base",
+ com.google.common.base.internal;x-internal:=true,
+ com.google.common.cache;
+  uses:="com.google.common.base,
+   new com.google.common.cache,
+   com.google.common.util.concurrent,
+   com.google.common.collect,
+   sun.misc",
+ com.google.common.collect;uses:="com.google.common.base,new new com.google.common.collect,new com.google.common.collect",
+ com.google.common.escape;uses:="com.google.common.base,new com.google.common.escape",
+ com.google.common.eventbus;uses:="com.google.common.cache,com.google.common.collect",
+ com.google.common.hash;uses:="new com.google.common.hash,com.google.common.base",
+ com.google.common.html;uses:="com.google.common.escape",
+ com.google.common.io;
+  uses:="new com.google.common.io,
+   com.google.common.base,
+   com.google.common.hash,
+   com.google.common.collect",
+ com.google.common.math,
+ com.google.common.net;uses:="com.google.common.base,com.google.common.escape,com.google.common.collect",
+ com.google.common.primitives;uses:="com.google.common.base,sun.misc",
+ com.google.common.reflect;uses:="com.google.common.base,new com.google.common.reflect,com.google.common.collect",
+ com.google.common.util.concurrent;uses:="new com.google.common.util.concurrent,com.google.common.base,com.google.common.collect",
+ com.google.common.xml;uses:="com.google.common.escape",
+ com.google.thirdparty.publicsuffix;uses:="com.google.common.collect",
+ com.laboki.eclipse.plugin.cleancodesorter;
+  uses:="org.osgi.framework,
+   com.laboki.eclipse.plugin.defaultplugin.instance,
+   org.eclipse.ui,
+   com.laboki.eclipse.plugin.defaultplugin.main,
+   org.eclipse.ui.plugin",
+ com.laboki.eclipse.plugin.cleancodesorter.cleanups,
+ com.laboki.eclipse.plugin.cleancodesorter.commands,
+ com.laboki.eclipse.plugin.cleancodesorter.contexts,
+ com.laboki.eclipse.plugin.cleancodesorter.events,
+ com.laboki.eclipse.plugin.cleancodesorter.instance,
+ com.laboki.eclipse.plugin.cleancodesorter.main;
+  uses:="org.eclipse.core.runtime.jobs,
+   com.laboki.eclipse.plugin.defaultplugin.instance,
+   org.eclipse.ui,
+   com.google.common.base,
+   org.eclipse.swt.widgets,
+   com.google.common.eventbus,
+   com.laboki.eclipse.plugin.defaultplugin.services",
+ com.laboki.eclipse.plugin.cleancodesorter.services;uses:="com.laboki.eclipse.plugin.defaultplugin.instance",
+ com.laboki.eclipse.plugin.cleancodesorter.task;uses:="org.eclipse.core.runtime.jobs,com.laboki.eclipse.plugin.defaultplugin.instance,org.eclipse.core.runtime",
+ com.laboki.eclipse.plugin.cleancodesorter.visitors
+Bundle-ClassPath: .,
+ libs/guava-18.0.jar
+Import-Package: com.google.common.base,
+ org.eclipse.jdt.core.refactoring,
+ org.eclipse.ui,
+ org.eclipse.ui.part

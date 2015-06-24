@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<plugin>
+	<extension point="org.eclipse.ui.startup">
+		<startup class="com.laboki.eclipse.plugin.cleancodesorter.Startup"/>
+	</extension>
+	
+	<extension point="org.eclipse.ui.bindings">
+		<key
+			commandId="com.laboki.eclipse.plugin.cleancodesorter.command.sortDocument"
+			contextId="org.eclipse.ui.contexts.window"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+			sequence="M1+M2+M3+F">
+		</key>
+	</extension>
+	
+	<extension point="org.eclipse.ui.commands">
+		<category
+			id="com.laboki.eclipse.plugin.cleancodesorter.category.commands"
+			name="%category.name"
+			description="%category.description">
+		</category>
+
+		<command
+			id="com.laboki.eclipse.plugin.cleancodesorter.command.sortDocument"
+			name="%command.name"
+			description="%command.description"
+			categoryId="com.laboki.eclipse.plugin.cleancodesorter.category.commands"
+			defaultHandler="com.laboki.eclipse.plugin.cleancodesorter.commands.SortHandler">
+		</command>
+	</extension>
+	
+	<extension
+         point="org.eclipse.jdt.ui.cleanUps">
+      <cleanUp
+            id="com.laboki.eclipse.plugin.cleancodesorter.sort_module_members"
+            class="com.laboki.eclipse.plugin.cleancodesorter.cleanups.SorterCleanUp">
+      </cleanUp>
+      
+      <cleanUpOptionsInitializer
+            class="com.laboki.eclipse.plugin.cleancodesorter.cleanups.SorterOnSaveOptionsInitializer"
+            cleanUpKind="saveAction">
+      </cleanUpOptionsInitializer>
+      
+      <cleanUpConfigurationUI
+            class="com.laboki.eclipse.plugin.cleancodesorter.cleanups.SorterTabPage"
+            name="%cleanUpConfigurationUI.name"
+            cleanUpKind="saveAction">
+      </cleanUpConfigurationUI>
+   </extension>
+</plugin>
