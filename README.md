@@ -95,4 +95,4 @@ class Foo {
 
 ## Update Site
 
-Update site will be added in a few hours for those who don't mind testing experimental software.
+- Update site will be added in a few hours for those who don't mind testing experimental software.
