@@ -95,4 +95,6 @@ class Foo {
 
 ## Update Site
 
-- Update site will be added in a few hours for those who don't mind testing experimental software.
+__P.S.__ This is very experimental software for testing purposes __ONLY__.
+
+- [Update Site](https://github.com/mystilleef/eclipse-cleancode-sorter-updatesite/master/com.laboki.eclipse.updatesite.cleancodesorter)
